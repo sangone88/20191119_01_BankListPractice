@@ -40,10 +40,9 @@ class MainActivity : BaseActivety() {
 
                     for (i in 0..banks.length()) {
                         val bankJSONObject = banks.getJSONObject(i)
-
-
+                        val bankData = Bank.getBankFromJsonObject(bankJSONObject)
+                        bankList.add(bankData)
                     }
-
                 }
                 else{
 //                    this@MainActivity -> mContext
